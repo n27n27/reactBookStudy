@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState, Component } from 'react';
 import './App.css';
+import Average from './hooks/Average';
+import AverageUseCallback from './hooks/AverageUseCallback';
+import Counter from './hooks/Counter';
+import CounterReducer from './hooks/CounterReducer';
+import Info from './hooks/Info';
+import InfoReducer from './hooks/InfoReducer';
+import InfoUseInputs from './hooks/InfoUseInputs';
+import UseInputs from './hooks/UseInputs';
+import IterationSample from './IterationSample';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Test
-        </a>
-      </header>
-    </div>
-  );
+function App() {  
+
+    const [visible, setVisible] = useState(false);
+    return (
+      <>
+        <InfoUseInputs />
+      </>
+    );
+  
 }
-
+  
 export default App;
